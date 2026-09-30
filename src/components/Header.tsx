@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import SearchBar from "./SearchBar";
@@ -13,7 +14,7 @@ export default function Header() {
   return (
     <>
       {/* Top banner */}
-      <div className="bg-emerald-700 text-white text-center text-xs sm:text-sm py-1.5 px-4 font-medium overflow-hidden">
+      <div className="bg-red-700 text-white text-center text-xs sm:text-sm py-1.5 px-4 font-medium overflow-hidden">
         <div className="animate-marquee whitespace-nowrap inline-block">
           🚚 Domicilios disponibles &bull; Pide fácil por nuestra web y recibe en tu casa &bull; Ana Karina Exprés, tu supermercado de confianza 🛒
         </div>
@@ -25,7 +26,7 @@ export default function Header() {
           {/* Menu button mobile */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-emerald-600"
+            className="lg:hidden p-2 text-gray-700 hover:text-red-600"
             aria-label="Menú"
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -38,14 +39,15 @@ export default function Header() {
           </button>
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-lg">
-              AK
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-gray-900 leading-tight">Ana Karina</h1>
-              <p className="text-[10px] text-emerald-600 font-semibold tracking-widest uppercase -mt-0.5">Exprés</p>
-            </div>
+          <Link href="/" className="shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Ana Karina Exprés"
+              width={120}
+              height={89}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
 
           {/* Search - Desktop */}
@@ -58,7 +60,7 @@ export default function Header() {
             {/* Search toggle mobile */}
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="lg:hidden p-2 text-gray-700 hover:text-emerald-600"
+              className="lg:hidden p-2 text-gray-700 hover:text-red-600"
               aria-label="Buscar"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -69,13 +71,13 @@ export default function Header() {
             {/* Cart */}
             <Link
               href="/carrito"
-              className="relative p-2 text-gray-700 hover:text-emerald-600 transition-colors"
+              className="relative p-2 text-gray-700 hover:text-red-600 transition-colors"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
               </svg>
               {totalItems > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 bg-orange-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center animate-bounce-once">
+                <span className="absolute -top-0.5 -right-0.5 bg-red-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center animate-bounce-once">
                   {totalItems}
                 </span>
               )}
@@ -110,7 +112,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium transition-colors"
+                  className="block px-3 py-2.5 rounded-lg text-gray-700 hover:bg-red-50 hover:text-red-700 font-medium transition-colors"
                 >
                   {link.label}
                 </Link>

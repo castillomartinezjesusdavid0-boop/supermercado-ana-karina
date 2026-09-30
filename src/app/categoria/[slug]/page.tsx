@@ -18,7 +18,7 @@ export default function CategoryPage() {
       <div className="max-w-7xl mx-auto px-4 py-20 text-center">
         <span className="text-6xl block mb-4">😕</span>
         <h1 className="text-2xl font-bold text-gray-900">Categoría no encontrada</h1>
-        <Link href="/" className="mt-4 inline-block text-emerald-600 hover:underline font-medium">
+        <Link href="/" className="mt-4 inline-block text-red-600 hover:underline font-medium">
           Volver al inicio
         </Link>
       </div>
@@ -37,7 +37,7 @@ export default function CategoryPage() {
         <div className="max-w-7xl mx-auto px-4">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Inicio</Link>
+            <Link href="/" className="hover:text-red-600 transition-colors">Inicio</Link>
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -61,8 +61,8 @@ export default function CategoryPage() {
             onClick={() => setSelectedSub(null)}
             className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
               !selectedSub
-                ? "bg-emerald-600 text-white shadow-md"
-                : "bg-white text-gray-600 border border-gray-200 hover:border-emerald-300 hover:text-emerald-600"
+                ? "bg-red-600 text-white shadow-md"
+                : "bg-white text-gray-600 border border-gray-200 hover:border-red-300 hover:text-red-600"
             }`}
           >
             Todos
@@ -73,8 +73,8 @@ export default function CategoryPage() {
               onClick={() => setSelectedSub(sub.slug)}
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
                 selectedSub === sub.slug
-                  ? "bg-emerald-600 text-white shadow-md"
-                  : "bg-white text-gray-600 border border-gray-200 hover:border-emerald-300 hover:text-emerald-600"
+                  ? "bg-red-600 text-white shadow-md"
+                  : "bg-white text-gray-600 border border-gray-200 hover:border-red-300 hover:text-red-600"
               }`}
             >
               {sub.name}
@@ -95,7 +95,7 @@ export default function CategoryPage() {
             <p className="text-gray-500 font-medium">No hay productos en esta subcategoría aún</p>
             <button
               onClick={() => setSelectedSub(null)}
-              className="mt-3 text-emerald-600 hover:underline font-medium text-sm"
+              className="mt-3 text-red-600 hover:underline font-medium text-sm"
             >
               Ver todos los productos de {category.name}
             </button>

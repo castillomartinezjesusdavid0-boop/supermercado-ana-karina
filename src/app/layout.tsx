@@ -14,8 +14,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Ana Karina Exprés | Tu Supermercado de Confianza",
   description:
-    "Pide tus productos del supermercado fácil y rápido. Frutas, verduras, carnes, lácteos, bebidas y más con entrega a domicilio.",
-  keywords: "supermercado, domicilios, mercado, abarrotes, frutas, verduras, Ana Karina",
+    "Víveres y abarrotes en general. Pide tus productos fácil y rápido con entrega a domicilio en Valledupar. Ana Karina Exprés.",
+  keywords: "supermercado, domicilios, mercado, abarrotes, frutas, verduras, Ana Karina, Valledupar",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

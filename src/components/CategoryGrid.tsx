@@ -5,7 +5,7 @@ export default function CategoryGrid() {
   return (
     <section id="categorias" className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-8">
-        <p className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Explora nuestro catálogo</p>
+        <p className="text-red-600 font-semibold text-sm uppercase tracking-wider">Explora nuestro catálogo</p>
         <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mt-1">
           Elige una categoría
         </h2>
@@ -21,7 +21,7 @@ export default function CategoryGrid() {
             <div className={`w-16 h-16 sm:w-20 sm:h-20 ${cat.color} rounded-2xl flex items-center justify-center text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-200 shadow-sm`}>
               {cat.icon}
             </div>
-            <span className="text-xs sm:text-sm font-semibold text-gray-700 text-center leading-tight group-hover:text-emerald-700 transition-colors">
+            <span className="text-xs sm:text-sm font-semibold text-gray-700 text-center leading-tight group-hover:text-red-700 transition-colors">
               {cat.name}
             </span>
           </Link>

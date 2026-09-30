@@ -9,7 +9,7 @@ const slides = [
     subtitle: "Pide fácil, recibe rápido",
     cta: "Empezar a comprar",
     href: "#categorias",
-    gradient: "from-emerald-600 via-emerald-500 to-teal-400",
+    gradient: "from-red-700 via-red-600 to-red-500",
     emoji: "🛒",
   },
   {
@@ -17,7 +17,7 @@ const slides = [
     subtitle: "Seleccionadas del campo a tu mesa",
     cta: "Ver productos",
     href: "/categoria/frutas-y-verduras",
-    gradient: "from-green-600 via-green-500 to-lime-400",
+    gradient: "from-green-700 via-green-600 to-green-500",
     emoji: "🥑",
   },
   {
@@ -25,7 +25,7 @@ const slides = [
     subtitle: "Ahorra en tus productos favoritos",
     cta: "Ver ofertas",
     href: "#ofertas",
-    gradient: "from-orange-500 via-amber-500 to-yellow-400",
+    gradient: "from-blue-800 via-blue-700 to-blue-600",
     emoji: "🔥",
   },
 ];
@@ -60,7 +60,7 @@ export default function Hero() {
             </p>
             <Link
               href={slide.href}
-              className="inline-flex items-center gap-2 mt-6 px-8 py-3.5 bg-white text-emerald-700 font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+              className="inline-flex items-center gap-2 mt-6 px-8 py-3.5 bg-white text-red-700 font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
             >
               {slide.cta}
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

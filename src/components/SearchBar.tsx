@@ -45,7 +45,7 @@ export default function SearchBar({ onSelect }: { onSelect?: () => void }) {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder="Buscar productos... ej: leche, pan, arroz"
-          className="w-full pl-10 pr-4 py-2.5 bg-gray-100 border border-gray-200 rounded-full text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent focus:bg-white transition-all"
+          className="w-full pl-10 pr-4 py-2.5 bg-gray-100 border border-gray-200 rounded-full text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent focus:bg-white transition-all"
         />
         {query && (
           <button
@@ -70,7 +70,7 @@ export default function SearchBar({ onSelect }: { onSelect?: () => void }) {
                 setIsFocused(false);
                 onSelect?.();
               }}
-              className="flex items-center gap-3 px-4 py-3 hover:bg-emerald-50 transition-colors border-b border-gray-50 last:border-0"
+              className="flex items-center gap-3 px-4 py-3 hover:bg-red-50 transition-colors border-b border-gray-50 last:border-0"
             >
               <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-2xl shrink-0">
                 {product.category === "frutas-y-verduras" ? "🥬" :
@@ -88,7 +88,7 @@ export default function SearchBar({ onSelect }: { onSelect?: () => void }) {
                 </p>
                 <p className="text-xs text-gray-500">{product.unit}</p>
               </div>
-              <span className="text-sm font-bold text-emerald-700 shrink-0">
+              <span className="text-sm font-bold text-red-700 shrink-0">
                 {formatPrice(product.price)}
               </span>
             </Link>

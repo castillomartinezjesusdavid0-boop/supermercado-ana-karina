@@ -15,7 +15,7 @@ export default function Home() {
       {/* New products */}
       <section className="max-w-7xl mx-auto px-4 py-10">
         <div className="text-center mb-8">
-          <p className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Recién llegados</p>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wider">Recién llegados</p>
           <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mt-1">Productos Nuevos</h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">
@@ -26,7 +26,7 @@ export default function Home() {
       </section>
 
       {/* Delivery banner */}
-      <section className="bg-gradient-to-r from-emerald-700 to-teal-600 py-10 sm:py-14">
+      <section className="bg-gradient-to-r from-red-700 to-red-600 py-10 sm:py-14">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-5xl sm:text-6xl block mb-4">🏍️</span>
           <h2 className="text-2xl sm:text-3xl font-black text-white">
@@ -74,7 +74,7 @@ export default function Home() {
       {/* All products preview */}
       <section className="max-w-7xl mx-auto px-4 py-10">
         <div className="text-center mb-8">
-          <p className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Nuestro catálogo</p>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wider">Nuestro catálogo</p>
           <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mt-1">Todos los Productos</h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">

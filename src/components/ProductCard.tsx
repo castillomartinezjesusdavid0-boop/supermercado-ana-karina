@@ -47,7 +47,7 @@ export default function ProductCard({ product }: { product: Product }) {
         {/* Badges */}
         <div className="absolute top-2 left-2 flex flex-col gap-1">
           {product.isNew && (
-            <span className="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
+            <span className="bg-blue-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
               Nuevo
             </span>
           )}
@@ -64,8 +64,8 @@ export default function ProductCard({ product }: { product: Product }) {
             onClick={handleQuickAdd}
             className={`absolute bottom-2 right-2 w-9 h-9 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 ${
               added
-                ? "bg-emerald-500 text-white scale-110"
-                : "bg-white text-emerald-600 opacity-0 group-hover:opacity-100 hover:bg-emerald-500 hover:text-white"
+                ? "bg-red-600 text-white scale-110"
+                : "bg-white text-red-600 opacity-0 group-hover:opacity-100 hover:bg-red-600 hover:text-white"
             }`}
             aria-label="Agregar al carrito"
           >
@@ -85,7 +85,7 @@ export default function ProductCard({ product }: { product: Product }) {
       {/* Info */}
       <div className="p-3 sm:p-4 flex-1 flex flex-col">
         <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">{product.brand}</p>
-        <h3 className="text-sm font-semibold text-gray-900 mt-0.5 leading-snug line-clamp-2 group-hover:text-emerald-700 transition-colors">
+        <h3 className="text-sm font-semibold text-gray-900 mt-0.5 leading-snug line-clamp-2 group-hover:text-red-700 transition-colors">
           {product.name}
         </h3>
         <p className="text-[11px] text-gray-400 mt-1">{product.unit}</p>
@@ -102,7 +102,7 @@ export default function ProductCard({ product }: { product: Product }) {
             )}
           </div>
           {hasVariants && (
-            <span className="text-[10px] text-emerald-600 font-medium bg-emerald-50 px-2 py-1 rounded-full">
+            <span className="text-[10px] text-red-600 font-medium bg-red-50 px-2 py-1 rounded-full">
               Ver opciones
             </span>
           )}

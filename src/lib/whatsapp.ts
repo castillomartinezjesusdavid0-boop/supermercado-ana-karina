@@ -1,6 +1,6 @@
 import { CartItem } from "@/types";
 
-const WHATSAPP_NUMBER = "573001234567"; // Placeholder — reemplazar con número real
+const WHATSAPP_NUMBER = "573045707438";
 
 export function formatPrice(price: number): string {
   return new Intl.NumberFormat("es-CO", {

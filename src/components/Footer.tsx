@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -29,17 +30,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center text-white font-black text-lg">
-                AK
-              </div>
-              <div>
-                <h3 className="text-white font-bold">Ana Karina</h3>
-                <p className="text-emerald-400 text-[10px] font-semibold tracking-widest uppercase">Exprés</p>
-              </div>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="Ana Karina Exprés"
+                width={120}
+                height={89}
+                className="h-16 w-auto brightness-110"
+              />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Tu supermercado de confianza. Productos frescos y de calidad con entrega a domicilio.
+              Víveres y abarrotes en general. Tu supermercado de confianza con entrega a domicilio en Valledupar.
             </p>
           </div>
 
@@ -55,7 +56,7 @@ export default function Footer() {
                 { href: "/categoria/despensa", name: "Despensa" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-emerald-400 transition-colors">
+                  <Link href={link.href} className="text-sm text-gray-400 hover:text-red-400 transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -80,19 +81,21 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-start gap-2">
                 <span className="text-lg">📍</span>
-                <p className="text-sm text-gray-400">Dirección del supermercado</p>
+                <p className="text-sm text-gray-400">Calle 6 # 19A2-04, Brr. Arizona<br />Valledupar - Cesar</p>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-lg">📞</span>
-                <p className="text-sm text-gray-400">+57 300 123 4567</p>
+                <div className="text-sm text-gray-400">
+                  <p>5875651 (Fijo)</p>
+                  <p>314 532 3560</p>
+                </div>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-lg">🕐</span>
+                <span className="text-lg">💬</span>
                 <div className="text-sm text-gray-400">
-                  <p>Lunes a Sábado</p>
-                  <p>7:00 AM - 9:00 PM</p>
-                  <p>Domingos y Festivos</p>
-                  <p>8:00 AM - 2:00 PM</p>
+                  <a href="https://wa.me/573045707438" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">304 570 7438 (WhatsApp)</a>
+                  <br />
+                  <a href="https://wa.me/573113821455" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">311 382 1455 (WhatsApp)</a>
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ export default function CartPage() {
         <p className="text-gray-500 mt-2">Agrega productos para armar tu pedido</p>
         <Link
           href="/"
-          className="inline-flex items-center gap-2 mt-6 px-8 py-3 bg-emerald-600 text-white font-bold rounded-full hover:bg-emerald-700 transition-colors"
+          className="inline-flex items-center gap-2 mt-6 px-8 py-3 bg-red-600 text-white font-bold rounded-full hover:bg-red-700 transition-colors"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -92,21 +92,21 @@ export default function CartPage() {
                 <p className="text-xs text-gray-400 mt-0.5">{item.product.unit}</p>
 
                 {/* Mobile price */}
-                <p className="sm:hidden text-sm font-bold text-emerald-700 mt-1">{formatPrice(price * item.quantity)}</p>
+                <p className="sm:hidden text-sm font-bold text-red-700 mt-1">{formatPrice(price * item.quantity)}</p>
               </div>
 
               {/* Quantity controls */}
               <div className="flex items-center gap-1 bg-gray-100 rounded-xl shrink-0">
                 <button
                   onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                  className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-emerald-600 font-bold transition-colors"
+                  className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-red-600 font-bold transition-colors"
                 >
                   −
                 </button>
                 <span className="w-8 text-center font-bold text-sm text-gray-900">{item.quantity}</span>
                 <button
                   onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                  className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-emerald-600 font-bold transition-colors"
+                  className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-red-600 font-bold transition-colors"
                 >
                   +
                 </button>
@@ -158,7 +158,7 @@ export default function CartPage() {
 
         <Link
           href="/"
-          className="w-full mt-3 py-3 rounded-2xl font-semibold text-sm border-2 border-gray-200 text-gray-600 hover:border-emerald-300 hover:text-emerald-600 transition-all flex items-center justify-center gap-2"
+          className="w-full mt-3 py-3 rounded-2xl font-semibold text-sm border-2 border-gray-200 text-gray-600 hover:border-red-300 hover:text-red-600 transition-all flex items-center justify-center gap-2"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -168,23 +168,23 @@ export default function CartPage() {
       </div>
 
       {/* How it works */}
-      <div className="mt-8 bg-emerald-50 rounded-2xl p-6">
-        <h3 className="font-bold text-emerald-800 text-center mb-4">Cómo funciona tu pedido</h3>
+      <div className="mt-8 bg-red-50 rounded-2xl p-6">
+        <h3 className="font-bold text-red-800 text-center mb-4">Cómo funciona tu pedido</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
           <div>
             <span className="text-2xl block mb-1">1️⃣</span>
-            <p className="text-sm text-emerald-700 font-medium">Presiona &quot;Enviar pedido&quot;</p>
-            <p className="text-xs text-emerald-600 mt-0.5">Se abre WhatsApp con tu lista</p>
+            <p className="text-sm text-red-700 font-medium">Presiona &quot;Enviar pedido&quot;</p>
+            <p className="text-xs text-red-600 mt-0.5">Se abre WhatsApp con tu lista</p>
           </div>
           <div>
             <span className="text-2xl block mb-1">2️⃣</span>
-            <p className="text-sm text-emerald-700 font-medium">Completa tu dirección</p>
-            <p className="text-xs text-emerald-600 mt-0.5">Y envía el mensaje</p>
+            <p className="text-sm text-red-700 font-medium">Completa tu dirección</p>
+            <p className="text-xs text-red-600 mt-0.5">Y envía el mensaje</p>
           </div>
           <div>
             <span className="text-2xl block mb-1">3️⃣</span>
-            <p className="text-sm text-emerald-700 font-medium">Recibe en tu casa</p>
-            <p className="text-xs text-emerald-600 mt-0.5">Te confirmamos y llevamos tu pedido</p>
+            <p className="text-sm text-red-700 font-medium">Recibe en tu casa</p>
+            <p className="text-xs text-red-600 mt-0.5">Te confirmamos y llevamos tu pedido</p>
           </div>
         </div>
       </div>
